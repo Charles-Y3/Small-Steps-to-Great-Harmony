@@ -1,6 +1,7 @@
 import type { SuiteApp } from '../data/types';
 import { useT } from '../i18n/useT';
 import { markVisited } from '../utils/visited';
+import { ModeRadar } from './ModeRadar';
 
 interface AppCardProps {
   app: SuiteApp;
@@ -24,8 +25,13 @@ export function AppCard({ app, visited, onVisit, dimmed = false }: AppCardProps)
       style={style}
     >
       {visited && <span className="appCardVisitedTick" title={t('card_visited')}>✓</span>}
-      <div className="appCardMark">
-        {app.iconSrc ? <img src={app.iconSrc} alt="" width={40} height={40} className="appCardIcon" /> : app.mark}
+      <div className="appCardTopRow">
+        <div className="appCardMark">
+          {app.iconSrc ? <img src={app.iconSrc} alt="" width={40} height={40} className="appCardIcon" /> : app.mark}
+        </div>
+        <div className="appCardRadar">
+          <ModeRadar modes={app.modes} color={app.accent} size={64} showLabels={false} />
+        </div>
       </div>
       <h3 className="appCardName">{L(app.name)}</h3>
       <p className="appCardTagline">{L(app.tagline)}</p>

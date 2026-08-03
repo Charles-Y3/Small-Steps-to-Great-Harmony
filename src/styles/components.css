@@ -207,9 +207,22 @@
   filter: saturate(0.6);
 }
 
+.appCardTopRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-3);
+}
+
 .appCardMark {
   font-size: var(--step-3);
-  margin-bottom: var(--space-3);
+}
+
+.appCardRadar {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  opacity: 0.9;
 }
 
 .appCardIcon {
@@ -298,7 +311,7 @@
 .appCardVisitedTick {
   position: absolute;
   top: var(--space-3);
-  right: var(--space-3);
+  left: var(--space-3);
   font-size: 0.7rem;
   color: var(--color-ink-faint);
 }

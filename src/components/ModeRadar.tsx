@@ -9,15 +9,17 @@ interface ModeRadarProps {
   modes: AppModeScores;
   color: string;
   size?: number;
+  /** Off for the tiny card-corner version — axis labels don't fit at
+   * ~60px and would just render as clipped noise. */
+  showLabels?: boolean;
 }
 
-/** A small individual radar for one app's detail section — three axes,
- * always Reflecting / Exploring / Reading in that order, each scored
- * independently out of 10. Two apps can share a similar shape (e.g. both
- * pure self-assessment quizzes); that's honest, not a chart bug — see the
- * time-estimate badge shown alongside it for what actually tells them
- * apart. */
-export function ModeRadar({ modes, color, size = 150 }: ModeRadarProps) {
+/** A small individual radar — three axes, always Reflecting / Exploring /
+ * Reading in that order, each scored independently out of 10. Two apps can
+ * share a similar shape (e.g. both pure self-assessment quizzes); that's
+ * honest, not a chart bug — see the time-estimate badge shown alongside it
+ * (in the detail view) for what actually tells them apart. */
+export function ModeRadar({ modes, color, size = 150, showLabels = true }: ModeRadarProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const chartRef = useRef<Chart | null>(null);
   const { t } = useT();
@@ -35,13 +37,14 @@ export function ModeRadar({ modes, color, size = 150 }: ModeRadarProps) {
             backgroundColor: `${color}22`,
             pointBackgroundColor: color,
             borderWidth: 2,
-            pointRadius: 3,
+            pointRadius: showLabels ? 3 : 0,
           },
         ],
       },
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        animation: showLabels ? undefined : false,
         scales: {
           r: {
             min: 0,
@@ -49,14 +52,16 @@ export function ModeRadar({ modes, color, size = 150 }: ModeRadarProps) {
             ticks: { display: false },
             grid: { color: 'rgba(150, 140, 125, 0.25)' },
             angleLines: { color: 'rgba(150, 140, 125, 0.25)' },
-            pointLabels: { font: { size: 11 }, color: '#84796b' },
+            pointLabels: showLabels
+              ? { font: { size: 11 }, color: '#84796b' }
+              : { display: false },
           },
         },
         plugins: { legend: { display: false } },
       },
     });
     return () => chartRef.current?.destroy();
-  }, [modes, color, t]);
+  }, [modes, color, showLabels, t]);
 
   return (
     <div style={{ position: 'relative', width: '100%', height: size }}>
