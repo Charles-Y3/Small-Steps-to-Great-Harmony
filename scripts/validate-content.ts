@@ -46,10 +46,6 @@ for (const app of APPS) {
   checkLocalized(`apps/${app.id}/notFor`, app.notFor);
   checkLocalized(`apps/${app.id}/tags`, app.tags);
   checkLocalized(`apps/${app.id}/timeEstimate`, app.timeEstimate);
-  const modeSum = app.modes.reflecting + app.modes.exploring + app.modes.reading;
-  if (modeSum !== 10) {
-    errors.push(`apps/${app.id}: modes sum to ${modeSum}, expected 10 (reflecting+exploring+reading)`);
-  }
   for (const [key, val] of Object.entries(app.modes)) {
     if (val < 0 || val > 10) errors.push(`apps/${app.id}: modes.${key} is ${val}, expected 0-10`);
   }

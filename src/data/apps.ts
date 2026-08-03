@@ -48,7 +48,7 @@ export const APPS: SuiteApp[] = [
     url: 'https://atlas-of-wisdom.vercel.app/',
     repo: 'https://github.com/Charles-Y3/Atlas-of-Wisdom',
     status: 'live',
-    modes: { reflecting: 1, exploring: 6, reading: 3 },
+    modes: { reflecting: 2, exploring: 9, reading: 5 },
     timeEstimate: localized('A few minutes of browsing', '隨手瀏覽幾分鐘'),
   },
   {
@@ -88,7 +88,7 @@ export const APPS: SuiteApp[] = [
     url: 'https://journey-to-great-harmony.vercel.app/',
     repo: 'https://github.com/Charles-Y3/Journey-To-Great-Harmony-',
     status: 'live',
-    modes: { reflecting: 4, exploring: 3, reading: 3 },
+    modes: { reflecting: 8, exploring: 6, reading: 5 },
     timeEstimate: localized('About 10 minutes a day', '每天約十分鐘'),
   },
   {
@@ -128,7 +128,7 @@ export const APPS: SuiteApp[] = [
     url: 'https://words-of-sages.vercel.app/',
     repo: 'https://github.com/Charles-Y3/Words-of-Sages',
     status: 'live',
-    modes: { reflecting: 2, exploring: 1, reading: 7 },
+    modes: { reflecting: 3, exploring: 2, reading: 10 },
     timeEstimate: localized('A chapter at a time, at your own pace', '一次一章，按自己的步調'),
   },
   {
@@ -168,7 +168,7 @@ export const APPS: SuiteApp[] = [
     url: 'https://little-stories-great-insights.vercel.app/',
     repo: 'https://github.com/Charles-Y3/Little-Stories-Great-Insights',
     status: 'live',
-    modes: { reflecting: 4, exploring: 1, reading: 5 },
+    modes: { reflecting: 5, exploring: 1, reading: 7 },
     timeEstimate: localized('About 2 minutes per story', '每則故事約兩分鐘'),
   },
   {
@@ -211,7 +211,7 @@ export const APPS: SuiteApp[] = [
     url: 'https://the-inner-compass-zeta.vercel.app/',
     repo: 'https://github.com/Charles-Y3/the-inner-compass',
     status: 'live',
-    modes: { reflecting: 8, exploring: 1, reading: 1 },
+    modes: { reflecting: 10, exploring: 1, reading: 2 },
     timeEstimate: localized('About 10 minutes', '約十分鐘'),
   },
   {
