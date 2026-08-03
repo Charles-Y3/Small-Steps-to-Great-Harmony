@@ -5,6 +5,7 @@ import { Hero } from './components/Hero';
 import { AppGrid } from './components/AppGrid';
 import { AppDetail } from './components/AppDetail';
 import { Footer } from './components/Footer';
+import { UpdatePrompt } from './components/UpdatePrompt';
 import { APPS } from './data/apps';
 import { useT } from './i18n/useT';
 import { readVisited } from './utils/visited';
@@ -41,6 +42,7 @@ function Page() {
         <AppDetail key={app.id} app={app} onVisit={handleVisit} />
       ))}
       <Footer visited={visited} onClear={handleClear} />
+      <UpdatePrompt />
     </>
   );
 }

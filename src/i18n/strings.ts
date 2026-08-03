@@ -81,6 +81,10 @@ export const UI: Record<string, Localized<string>> = {
   ),
   footer_updated: localized('Last updated', '最後更新'),
   footer_version: localized('v{version}', 'v{version}'),
+
+  update_available: localized('A new version of this page is ready.', '這個頁面有新版本了。'),
+  update_reload: localized('Reload', '重新整理'),
+  update_dismiss: localized('Dismiss', '關閉'),
 };
 
 export function interpolate(template: string, vars: Record<string, string | number>): string {
