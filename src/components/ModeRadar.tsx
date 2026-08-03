@@ -5,6 +5,18 @@ import { useT } from '../i18n/useT';
 
 Chart.register(RadarController, RadialLinearScale, PointElement, LineElement, Filler);
 
+// Short, locale-specific axis labels just for this chart — not the shared
+// filter_reflecting/etc UI strings (those need full words for the filter
+// chips). "Reflecting"/"Exploring"/"Reading" reserve a lot more radial
+// space than their 2-character Chinese equivalents, which is why the same
+// canvas size used to render a visibly smaller polygon in English than in
+// Chinese; shorter English words close most of that gap.
+const SHORT_LABELS: Record<string, [string, string, string]> = {
+  en: ['Reflect', 'Explore', 'Read'],
+  'zh-Hant': ['反思', '探索', '閱讀'],
+  'zh-Hans': ['反思', '探索', '阅读'],
+};
+
 interface ModeRadarProps {
   modes: AppModeScores;
   color: string;
@@ -22,14 +34,14 @@ interface ModeRadarProps {
 export function ModeRadar({ modes, color, size = 150, showLabels = true }: ModeRadarProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const chartRef = useRef<Chart | null>(null);
-  const { t } = useT();
+  const { locale } = useT();
 
   useEffect(() => {
     if (!canvasRef.current) return;
     chartRef.current = new Chart(canvasRef.current, {
       type: 'radar',
       data: {
-        labels: [t('filter_reflecting'), t('filter_exploring'), t('filter_reading')],
+        labels: SHORT_LABELS[locale],
         datasets: [
           {
             data: [modes.reflecting, modes.exploring, modes.reading],
@@ -45,6 +57,7 @@ export function ModeRadar({ modes, color, size = 150, showLabels = true }: ModeR
         responsive: true,
         maintainAspectRatio: false,
         animation: showLabels ? undefined : false,
+        layout: { padding: 0 },
         scales: {
           r: {
             min: 0,
@@ -53,7 +66,7 @@ export function ModeRadar({ modes, color, size = 150, showLabels = true }: ModeR
             grid: { color: 'rgba(150, 140, 125, 0.25)' },
             angleLines: { color: 'rgba(150, 140, 125, 0.25)' },
             pointLabels: showLabels
-              ? { font: { size: 11 }, color: '#84796b' }
+              ? { font: { size: 12, weight: 'bold' }, color: '#84796b' }
               : { display: false },
           },
         },
@@ -61,7 +74,7 @@ export function ModeRadar({ modes, color, size = 150, showLabels = true }: ModeR
       },
     });
     return () => chartRef.current?.destroy();
-  }, [modes, color, showLabels, t]);
+  }, [modes, color, showLabels, locale]);
 
   return (
     <div style={{ position: 'relative', width: '100%', height: size }}>

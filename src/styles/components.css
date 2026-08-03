@@ -207,22 +207,23 @@
   filter: saturate(0.6);
 }
 
-.appCardTopRow {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+.appCardMark {
+  font-size: var(--step-3);
   margin-bottom: var(--space-3);
 }
 
-.appCardMark {
-  font-size: var(--step-3);
+.appCardRadar {
+  width: 180px;
+  height: 180px;
+  margin: var(--space-1) auto 0;
+  opacity: 0.9;
 }
 
-.appCardRadar {
-  width: 130px;
-  height: 130px;
-  flex-shrink: 0;
-  opacity: 0.9;
+.appCardVersion {
+  color: var(--color-ink-faint);
+  font-size: 0.7rem;
+  opacity: 0.7;
+  margin-bottom: var(--space-2);
 }
 
 .appCardIcon {
@@ -311,7 +312,7 @@
 .appCardVisitedTick {
   position: absolute;
   top: var(--space-3);
-  left: var(--space-3);
+  right: var(--space-3);
   font-size: 0.7rem;
   color: var(--color-ink-faint);
 }
@@ -590,4 +591,11 @@
 
 .footerRepos a {
   color: var(--color-ink-soft);
+}
+
+.footerVersion {
+  color: var(--color-ink-faint);
+  font-size: 0.7rem;
+  margin-top: var(--space-3);
+  opacity: 0.7;
 }

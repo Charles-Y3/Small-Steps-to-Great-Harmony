@@ -1,5 +1,6 @@
 import { useT } from '../i18n/useT';
 import { clearVisited } from '../utils/visited';
+import pkg from '../../package.json';
 
 interface FooterProps {
   visited: Record<string, number>;
@@ -24,6 +25,7 @@ export function Footer({ visited, onClear }: FooterProps) {
         )}
       </p>
       <p>{t('footer_privacy')}</p>
+      <p className="footerVersion">{t('footer_version', { version: pkg.version })}</p>
     </footer>
   );
 }

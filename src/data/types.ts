@@ -33,6 +33,9 @@ export interface SuiteApp {
   iconSrc?: string;
   url: string;
   repo: string;
+  /** The sibling app's own package.json version — fetched from its repo,
+   * not invented here, so it stays honest if it drifts. */
+  version: string;
   status: 'live' | 'coming-soon';
   modes: AppModeScores;
   /** Rough time investment — shown next to the radar chart, since two apps

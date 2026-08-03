@@ -12,7 +12,7 @@ const errors: string[] = [];
 // labels), or where "zhHant" is deliberately Latin (a proper noun with no
 // official Chinese name, kept identical in both fields on purpose).
 const ALLOW_CJK_IN_EN = new Set<string>(['UI/nav_lang_zhHant', 'UI/nav_lang_zhHans']);
-const ALLOW_LATIN_IN_ZH = new Set<string>(['apps/atlas/name']);
+const ALLOW_LATIN_IN_ZH = new Set<string>(['apps/atlas/name', 'UI/footer_version']);
 
 function checkLocalized(path: string, loc: { en: unknown; zhHant: unknown }) {
   const enVal = loc.en;

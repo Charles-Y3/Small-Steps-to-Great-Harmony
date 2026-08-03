@@ -80,6 +80,7 @@ export const UI: Record<string, Localized<string>> = {
     '這個頁面只會在你自己的裝置上記下你開啟過哪些作品，除此之外不追蹤任何資訊，也不會傳送到任何地方。',
   ),
   footer_updated: localized('Last updated', '最後更新'),
+  footer_version: localized('v{version}', 'v{version}'),
 };
 
 export function interpolate(template: string, vars: Record<string, string | number>): string {

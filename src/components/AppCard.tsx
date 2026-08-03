@@ -25,21 +25,20 @@ export function AppCard({ app, visited, onVisit, dimmed = false }: AppCardProps)
       style={style}
     >
       {visited && <span className="appCardVisitedTick" title={t('card_visited')}>✓</span>}
-      <div className="appCardTopRow">
-        <div className="appCardMark">
-          {app.iconSrc ? <img src={app.iconSrc} alt="" width={40} height={40} className="appCardIcon" /> : app.mark}
-        </div>
-        <div className="appCardRadar">
-          <ModeRadar modes={app.modes} color={app.accent} size={130} showLabels />
-        </div>
+      <div className="appCardMark">
+        {app.iconSrc ? <img src={app.iconSrc} alt="" width={40} height={40} className="appCardIcon" /> : app.mark}
       </div>
       <h3 className="appCardName">{L(app.name)}</h3>
+      <div className="appCardRadar">
+        <ModeRadar modes={app.modes} color={app.accent} size={180} showLabels />
+      </div>
       <p className="appCardTagline">{L(app.tagline)}</p>
       <div className="appCardTags">
         {L(app.tags).map((tag) => (
           <span key={tag} className="appCardTag">{tag}</span>
         ))}
       </div>
+      <span className="appCardVersion">{t('footer_version', { version: app.version })}</span>
       <div className="appCardActions">
         {app.status === 'live' ? (
           <a
