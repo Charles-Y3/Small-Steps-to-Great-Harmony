@@ -219,8 +219,8 @@
 }
 
 .appCardRadar {
-  width: 64px;
-  height: 64px;
+  width: 130px;
+  height: 130px;
   flex-shrink: 0;
   opacity: 0.9;
 }

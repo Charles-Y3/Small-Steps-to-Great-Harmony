@@ -48,7 +48,7 @@ export const APPS: SuiteApp[] = [
     url: 'https://atlas-of-wisdom.vercel.app/',
     repo: 'https://github.com/Charles-Y3/Atlas-of-Wisdom',
     status: 'live',
-    modes: { reflecting: 2, exploring: 9, reading: 5 },
+    modes: { reflecting: 2, exploring: 9, reading: 7 },
     timeEstimate: localized('A few minutes of browsing', '隨手瀏覽幾分鐘'),
   },
   {
@@ -88,7 +88,7 @@ export const APPS: SuiteApp[] = [
     url: 'https://journey-to-great-harmony.vercel.app/',
     repo: 'https://github.com/Charles-Y3/Journey-To-Great-Harmony-',
     status: 'live',
-    modes: { reflecting: 8, exploring: 6, reading: 5 },
+    modes: { reflecting: 8, exploring: 6, reading: 6 },
     timeEstimate: localized('About 10 minutes a day', '每天約十分鐘'),
   },
   {
@@ -251,7 +251,7 @@ export const APPS: SuiteApp[] = [
     url: 'https://star-bearing.vercel.app/',
     repo: 'https://github.com/Charles-Y3/the-cayce-reflection',
     status: 'live',
-    modes: { reflecting: 9, exploring: 0, reading: 1 },
+    modes: { reflecting: 7, exploring: 0, reading: 1 },
     timeEstimate: localized('8 questions, about 5 minutes', '八題，約五分鐘'),
   },
 ];
