@@ -1,0 +1,23 @@
+---
+description: Suite apps sync their package.json version into this portal's apps.ts
+alwaysApply: true
+---
+
+# Portal version sync (incoming)
+
+Each live suite app keeps a `version` on its entry in `src/data/apps.ts`.
+That field must match the sibling app's own `package.json` version — it is
+not invented here.
+
+| Portal `id` | App |
+|-------------|-----|
+| `atlas` | Atlas of Wisdom |
+| `journey` | Journey to Great Harmony |
+| `words` | Words of Sages |
+| `stories` | Little Stories, Great Insights |
+| `compass` | The Inner Compass |
+| `cayce` | Star-Bearing |
+
+When a sibling app ships, agents update the matching `version` here and
+**commit + push** this repo. If you change a version in `apps.ts` by hand,
+keep it equal to that app's `package.json` on disk / on its default branch.
