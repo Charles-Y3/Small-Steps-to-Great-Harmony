@@ -12,7 +12,7 @@ interface AppGridProps {
 export function AppGrid({ visited, onVisit }: AppGridProps) {
   const { t } = useT();
   const [filter, setFilter] = useState<ModeFilter>('all');
-  const sorted = [...APPS].sort((a, b) => a.order - b.order);
+  const sorted = [...APPS].sort((a, b) => a.order - b.order).filter((app) => isStrongIn(app.modes, filter));
 
   return (
     <section id="apps" className="section">
@@ -25,7 +25,6 @@ export function AppGrid({ visited, onVisit }: AppGridProps) {
             app={app}
             visited={Boolean(visited[app.id])}
             onVisit={onVisit}
-            dimmed={!isStrongIn(app.modes, filter)}
           />
         ))}
       </div>

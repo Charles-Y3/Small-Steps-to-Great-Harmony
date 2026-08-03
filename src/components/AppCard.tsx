@@ -7,10 +7,9 @@ interface AppCardProps {
   app: SuiteApp;
   visited: boolean;
   onVisit: (id: string) => void;
-  dimmed?: boolean;
 }
 
-export function AppCard({ app, visited, onVisit, dimmed = false }: AppCardProps) {
+export function AppCard({ app, visited, onVisit }: AppCardProps) {
   const { t, L } = useT();
   // Always the light-theme accent value, even in dark mode: these six
   // colors are all mid-to-dark toned and were chosen to hold up against
@@ -21,7 +20,7 @@ export function AppCard({ app, visited, onVisit, dimmed = false }: AppCardProps)
 
   return (
     <div
-      className={`appCard ${app.status === 'coming-soon' ? 'appCardComingSoon' : ''} ${dimmed ? 'appCardDimmed' : ''}`}
+      className={`appCard ${app.status === 'coming-soon' ? 'appCardComingSoon' : ''}`}
       style={style}
     >
       {visited && <span className="appCardVisitedTick" title={t('card_visited')}>✓</span>}
