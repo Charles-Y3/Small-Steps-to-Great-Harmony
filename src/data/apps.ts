@@ -129,7 +129,7 @@ export const APPS: SuiteApp[] = [
     iconSrc: '/app-icons/words.png',
     url: 'https://words-of-sages.vercel.app/',
     repo: 'https://github.com/Charles-Y3/Words-of-Sages',
-    version: '1.0.1',
+    version: '1.0.2',
     status: 'live',
     modes: { reflecting: 3, exploring: 2, reading: 10 },
     timeEstimate: localized('A chapter at a time, at your own pace', '一次一章，按自己的步調'),
