@@ -214,7 +214,7 @@ export const APPS: SuiteApp[] = [
     iconSrc: '/app-icons/compass.png',
     url: 'https://the-inner-compass-zeta.vercel.app/',
     repo: 'https://github.com/Charles-Y3/the-inner-compass',
-    version: '1.0.0',
+    version: '1.0.1',
     status: 'live',
     modes: { reflecting: 10, exploring: 1, reading: 2 },
     timeEstimate: localized('About 15 minutes', '約十五分鐘'),
