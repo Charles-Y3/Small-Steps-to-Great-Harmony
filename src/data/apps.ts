@@ -170,7 +170,7 @@ export const APPS: SuiteApp[] = [
     iconSrc: '/app-icons/stories.png',
     url: 'https://little-stories-great-insights.vercel.app/',
     repo: 'https://github.com/Charles-Y3/Little-Stories-Great-Insights',
-    version: '1.0.0',
+    version: '1.1.0',
     status: 'live',
     modes: { reflecting: 5, exploring: 1, reading: 7 },
     timeEstimate: localized('About 2 minutes per story', '每則故事約兩分鐘'),
