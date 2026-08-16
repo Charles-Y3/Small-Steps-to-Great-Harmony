@@ -47,7 +47,7 @@ export const APPS: SuiteApp[] = [
     iconSrc: '/app-icons/atlas.png',
     url: 'https://atlas-of-wisdom.vercel.app/',
     repo: 'https://github.com/Charles-Y3/Atlas-of-Wisdom',
-    version: '1.0.0',
+    version: '1.1.0',
     status: 'live',
     modes: { reflecting: 2, exploring: 9, reading: 7 },
     timeEstimate: localized('A few minutes of browsing', '隨手瀏覽幾分鐘'),
