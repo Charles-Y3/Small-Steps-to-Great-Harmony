@@ -88,7 +88,7 @@ export const APPS: SuiteApp[] = [
     iconSrc: '/app-icons/journey.png',
     url: 'https://journey-to-great-harmony.vercel.app/',
     repo: 'https://github.com/Charles-Y3/Journey-To-Great-Harmony-',
-    version: '1.4.2',
+    version: '1.4.3',
     status: 'live',
     modes: { reflecting: 8, exploring: 6, reading: 6 },
     timeEstimate: localized('About 10 minutes a day', '每天約十分鐘'),
