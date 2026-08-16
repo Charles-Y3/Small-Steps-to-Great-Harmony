@@ -106,10 +106,12 @@ export const APPS: SuiteApp[] = [
       [
         'A bilingual reader for Taoist, Confucian, and Buddhist classical texts, spanning short works (the Heart Sutra) to long ones (the Diamond Sutra\'s 40 divisions, the Spring and Autumn Annals\' 65 sections). Every unit follows the same shape: original text, a plain explanation, and a practical application.',
         'Read-aloud works in both Chinese and English, with careful attention to correct Chinese pronunciation for characters with multiple readings. You can also write down your own takeaway for any passage and keep it alongside the text.',
+        'Backup behaves differently by browser: on desktop Chrome or Edge, and on Android Chrome, you can pick a folder once and every export or auto-save afterward overwrites the same file there. On other mobile browsers — including every iPhone browser, since iOS requires them all to run on Safari\'s engine — there\'s no folder access, so each export is a separate, timestamped download you\'d need to manage yourself.',
       ],
       [
         '一個雙語經典讀本，涵蓋道家、儒家、佛家經典，從短篇（心經）到長篇（金剛經 40 分、春秋 65 節）皆有收錄。每個單元都採用相同結構：原文、白話解釋，以及一項實踐應用。',
         '朗讀功能支援中文與英文雙語，並特別注意中文破音字的正確發音。你也可以為任何一段經文寫下自己的心得，並保留在文字旁。',
+        '備份的方式會依瀏覽器而不同：在電腦版 Chrome 或 Edge，以及 Android 版 Chrome 上，你可以選擇一次資料夾，之後每次匯出或自動儲存都會覆寫同一個檔案。在其他行動瀏覽器上——包括所有 iPhone 瀏覽器，因為 iOS 規定它們都必須使用 Safari 引擎——則無法存取資料夾，因此每次匯出都會是獨立、附帶時間戳記的下載檔案，需要自行管理。',
       ],
     ),
     goodFor: localized(
@@ -147,10 +149,12 @@ export const APPS: SuiteApp[] = [
       [
         'A small, quiet reading app: a deck of short parables, each one a flip-card with the story on the back. English is a faithful adaptation of the Chinese, not a literal translation — same meaning, same arc, tighter prose.',
         'Story length is a hard, enforced budget, so every parable is genuinely a two-minute read, not a scroll-forever article dressed up as one. After each story, you can write down your own insight or takeaway and keep it with the card.',
+        'Backup behaves differently by browser: on desktop Chrome or Edge, and on Android Chrome, you can pick a folder once and every export or auto-save of your insights afterward overwrites the same file there. On other mobile browsers — including every iPhone browser, since iOS requires them all to run on Safari\'s engine — there\'s no folder access, so each export is a separate, timestamped download you\'d need to manage yourself.',
       ],
       [
         '一個小巧、安靜的閱讀作品：一組短篇寓言卡片，翻到背面就是故事本文。英文版是中文的忠實改寫，而非逐字翻譯——保留相同的意涵與轉折，但文字更精煉。',
         '故事長度有嚴格的篇幅限制，因此每則寓言都真的只需要兩分鐘閱讀，而不是包裝成卡片、實際上要一直往下滑的長文。讀完後，你可以寫下自己的心得或啟發，並保留在卡片旁。',
+        '備份的方式會依瀏覽器而不同：在電腦版 Chrome 或 Edge，以及 Android 版 Chrome 上，你可以選擇一次資料夾，之後每次匯出或自動儲存你的心得都會覆寫同一個檔案。在其他行動瀏覽器上——包括所有 iPhone 瀏覽器，因為 iOS 規定它們都必須使用 Safari 引擎——則無法存取資料夾，因此每次匯出都會是獨立、附帶時間戳記的下載檔案，需要自行管理。',
       ],
     ),
     goodFor: localized(
