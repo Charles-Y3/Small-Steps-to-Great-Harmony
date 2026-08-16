@@ -10,6 +10,16 @@ import { APPS } from './data/apps';
 import { useT } from './i18n/useT';
 import { readVisited } from './utils/visited';
 
+function BackupNoteSection() {
+  const { t } = useT();
+  return (
+    <section id="backup-note" className="section">
+      <h2 className="sectionTitle">{t('section_backup_title')}</h2>
+      <p className="aboutBody">{t('section_backup_body')}</p>
+    </section>
+  );
+}
+
 function AboutSection() {
   const { t } = useT();
   return (
@@ -37,6 +47,7 @@ function Page() {
       <Header />
       <Hero />
       <AppGrid visited={visited} onVisit={handleVisit} />
+      <BackupNoteSection />
       <AboutSection />
       {sorted.map((app) => (
         <AppDetail key={app.id} app={app} onVisit={handleVisit} />

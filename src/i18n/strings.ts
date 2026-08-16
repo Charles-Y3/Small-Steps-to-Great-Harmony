@@ -41,6 +41,11 @@ export const UI: Record<string, Localized<string>> = {
     'What are you in the mood for? These highlight which apps lean that way.',
     '你現在想做點什麼？以下會標出偏向這個方向的作品。',
   ),
+  section_backup_title: localized('A note on backup & export', '關於備份與匯出的提醒'),
+  section_backup_body: localized(
+    'A few apps in this suite let you back up your data (notes, insights, progress) to a file on your device. How that works depends on your browser: on desktop Chrome or Edge, and on Android Chrome, you can pick a folder once, and every export or auto-save afterward overwrites the same file there. On any other mobile browser — including every iPhone browser, since iOS requires them all to run on Safari’s engine — there’s no folder access, so each export becomes a separate, timestamped download you’d need to manage yourself.',
+    '本站部分作品可以將你的資料（筆記、心得、進度）備份成裝置上的檔案。實際運作方式依瀏覽器而不同：在電腦版 Chrome 或 Edge，以及 Android 版 Chrome 上，你可以選擇一次資料夾，之後每次匯出或自動儲存都會覆寫同一個檔案。在其他行動瀏覽器上——包括所有 iPhone 瀏覽器，因為 iOS 規定它們都必須使用 Safari 引擎——則無法存取資料夾，因此每次匯出都會變成獨立、附帶時間戳記的下載檔案，需要自行管理。',
+  ),
   section_about_title: localized('About this page', '關於這個頁面'),
   section_about_body: localized(
     'These are six separate, independently-built projects that happen to share a family resemblance — an interest in wisdom traditions, reflection, and quiet daily practice. They were not designed as one product, they don’t share accounts or data, and this page is just an index — nothing here tracks you across the six.',
